@@ -1,0 +1,132 @@
+<lsf>
+    <initials>
+        <reference length="1" />
+        <root id="sceneRoot" />
+    </initials>
+
+    <views default="FirstCamera">
+        <perspective id="FirstCamera" near="0.3" far="50" angle="45">
+            <from x="2" y="5" z="10" />
+            <to x="2" y="0 " z="0" />
+        </perspective>
+
+        <perspective id="SecondCamera" near="0.3" far="50" angle="45">
+            <from x="-6" y="3" z="2" />
+            <to x="3" y="0" z="3" />
+        </perspective>
+  
+        <perspective id="ThirdCamera" near="0.3" far="50" angle="45">
+            <from x="8" y="3" z="2" />
+            <to x="2" y="0" z="2" />
+        </perspective>
+    </views>
+
+    <illumination>
+        <ambient r="0.5" g="0.5" b="0.5" a="1.0" />
+        <!-- global ambient -->
+        <background r="0.0" g="0.0" b="0.0" a="1.0" />
+        <!-- background color -->
+    </illumination>
+
+    <lights>
+        <light id="light1">
+            <enable value="1" />
+            <position x="2.5" y="4.0" z="2.5" w="1.0" />
+            <ambient r="0.1" g="0.1" b="0.1" a="1.0" />
+            <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </light>
+        <light id="light2">
+            <enable value="1" />
+            <position x="2.5" y="4.0" z="-2.5" w="1.0" />
+            <ambient r="0.1" g="0.1" b="0.1" a="1.0" />
+            <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </light>
+        <light id="light3">
+            <enable value="1" />
+            <position x="-2.5" y="4.0" z="-2.5" w="1.0" />
+            <ambient r="0.1" g="0.1" b="0.1" a="1.0" />
+            <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </light>
+        <light id="light4">
+            <enable value="1" />
+            <position x="-2.5" y="4.0" z="2.5" w="1.0" />
+            <ambient r="0.1" g="0.1" b="0.1" a="1.0" />
+            <diffuse r="1.0" g="1.0" b="1.0" a="1.0" />
+            <specular r="1.0" g="1.0" b="1.0" a="1.0" />
+        </light>
+    </lights>
+    
+    <textures>
+    </textures>
+
+    <spritesheets>
+        <spritesheet id="fire" path="./themes/images/fire.jpg" sizeM="8" sizeN="8" />
+    </spritesheets>
+
+    <materials>
+        <material id="whiteMaterial">
+            <shininess value="1" />
+            <ambient r="0.2" g="0.2" b="0.2" a="1" />
+            <diffuse r="1" g="1" b="1" a="1" />
+            <specular r="0.3" g="0.3" b="0.3" a="1" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="blackMaterial">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1" />
+            <diffuse r="0.1" g="0.1" b="0.1" a="1" />
+            <specular r="0.0" g="0.0" b="0.0" a="1" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="greenMaterial">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1" />
+            <diffuse r="0.27" g="0.55" b="0" a="1" />
+            <specular r="0.0" g="0.0" b="0.0" a="1" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+        <material id="redMaterial">
+            <shininess value="10" />
+            <ambient r="0.0" g="0.0" b="0.0" a="1" />
+            <diffuse r="1" g="0" b="0" a="1" />
+            <specular r="0.0" g="0.0" b="0.0" a="1" />
+            <emissive r="0.0" g="0.0" b="0.0" a="1.0" />
+        </material>
+    </materials>
+
+
+    <animations>
+    </animations>
+
+    <model>
+        <transformations>
+
+        </transformations>
+        <gameboard material="whiteMaterial" texture="null"/>
+        <tile material="blackMaterial" texture="null"/>
+        <pieces>
+            <type1 material="blackMaterial" texture="null"/>
+            <type2 material="whiteMaterial" texture="null"/>
+            <type3 material="greenMaterial" texture="null"/>
+        </pieces>
+    </model>
+
+    <nodes>
+        <node id="sceneRoot">
+            <material id="whiteMaterial"/>
+            <texture id="null">
+                <amplification afs="1" aft="1"/>
+            </texture>
+            <transformations>
+
+            </transformations>
+            <descendants>
+               
+            </descendants>
+        </node>
+    </nodes>
+
+</lsf>
